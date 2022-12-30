@@ -1,5 +1,6 @@
 import * as T from 'three'; 
 import "./style.css"
+import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls'
 
 
 //Scene
@@ -30,9 +31,36 @@ camera.position.z = 20
 scene.add(camera)
 
 
-//Render
+//Renderer
 const canvas = document.querySelector('.webgl')
 const renderer = new T.WebGLRenderer({canvas})
 renderer.setSize(sizes.width,sizes.height)
+renderer.setPixelRatio(2)
 renderer.render(scene,camera)
 
+//Controls
+const controls = new OrbitControls(camera, canvas)
+controls.enableDamping = true
+controls.enablePan = false
+controls.enableZoom = false
+controls.autoRotate = true
+
+//Resize
+window.addEventListener('resize', () => {
+  //Update Sizes
+  sizes.width = window.innerWidth
+  sizes.height = window.innerHeight
+  
+  //Update Camera
+ 
+  camera.aspect = sizes.width / sizes.height
+  camera.updateProjectionMatrix()
+  renderer.setSize(sizes.width, sizes.height)
+})
+
+const loop = () => {
+  controls.update()
+  renderer.render(scene, camera)
+  window.requestAnimationFrame(loop)
+}
+loop()
