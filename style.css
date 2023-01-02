@@ -2,9 +2,305 @@
   margin:0;
   padding: 0;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  
+
 }
 
 body,
 html{
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: 'Montserrat', sans-serif;
 }
+
+.webgl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+nav{
+color: white;
+z-index: 2;
+position: relative;
+padding: 4rem 8rem;
+display: flex;
+justify-content: space-between;
+}
+
+nav a{
+  text-decoration: none;
+  color: white;
+
+}
+nav ul{
+  list-style: none;
+  display: flex;
+
+}
+
+nav ul li{
+  font-weight: bold;
+  padding: 8px 14px;
+  font-size: 12;
+  transition: 0.6s;
+}
+
+.text-box{
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.text-box h1{
+  font-size: 65px;
+  font-weight: 600;
+}
+.text-box h2{
+  font-size: 65px;
+  margin-top: -25px;
+  padding: 10px;
+  font-weight: 600;
+}
+.text-box p{
+  margin: margin 10px 0 40px;
+  font-size: 15px;
+  color: #fff;
+  padding: 2px;
+}
+.hero-btn{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 30px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: 1s;
+}
+.hero-btn:hover{
+  border: 1px solid #961a1a;
+  background: #961a1a;
+}
+
+/* CUSTOM SCROLL */
+/*
+#scrollPath{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background: rgba(255,255,255,0.05);
+}
+#progressbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  background: linear-gradient(to top,#ffffff,#000000);
+  animation: animate 5s linear infinite; 
+  z-index: 2;
+}
+
+#progressbar:before{
+  content: '';
+  position:absolute;
+  top:0;
+  right:0;
+  width:100%;
+  height:100%;
+  background: linear-gradient(to top,#ffffff,#000000);
+  filter: blur(10px);
+}
+#progressbar:after{
+  content: '';
+  position:absolute;
+  top:0;
+  right:0;
+  width:100%;
+  height:100%;
+  background: linear-gradient(to top,#ffffff,#000000);
+  filter: blur(30px);
+}
+*/
+
+
+/*PHONE SETTINGS*/
+
+@media(max-width: 700px){
+  .text-box h1{
+      font-size: 22px;
+  }
+  .text-box h2{
+      font-size: 20px;
+      margin-top: -1px;
+  }
+  .text-box p{
+      font-size: 13px;
+  }
+  .nav-links ul li{
+      display: block;
+  }
+  .nav-links{
+      position: absolute;
+      background: #2e2626;
+      height: 100vh;
+      width: 200px;
+      top: 0;
+      right: -200px;
+      text-align: left;
+      z-index: 2;
+      transition: 0.7s;
+  }
+  nav .fa{
+      display: block;
+      color: #fff;
+      margin: 10px;
+      font-size: 22px;
+      cursor: pointer;
+  }
+  .nav-links ul{
+      padding: 30px;
+  }
+  
+  nav{
+      display: flex;
+      padding: 2% 6%;
+      justify-content: space-between;
+      align-items: center;
+      background-color: transparent;
+  }
+
+  #scrollPath{
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 10px;
+      height: 100%;
+      background: rgba(255, 255, 255, 0);
+  }
+  #progressbar{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 10px;
+      background: linear-gradient(to top,#ffffff00,#00000000);
+      animation: animate 5s linear infinite; 
+      z-index: 2;
+  }
+  
+  #progressbar:before{
+      content: '';
+      position:absolute;
+      top:0;
+      right:0;
+      width:100%;
+      height:100%;
+      background: linear-gradient(to top,#ffffff00,#00000000);
+      filter: blur(10px);
+  }
+  #progressbar:after{
+      content: '';
+      position:absolute;
+      top:0;
+      right:0;
+      width:100%;
+      height:100%;
+      background: linear-gradient(to top,#ffffff00,#00000000);
+      filter: blur(30px);
+  }
+}
+
+
+/*---About Me Page---*/
+
+.aboutHeader{
+  height: 60vh;
+  width: 100%;
+  margin-top: 40rem;
+  background-image: url(images/aboutBanner.jpg);
+  z-index: 3;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #fff
+}
+.aboutHeader h1{
+  font-size: 65px;
+  padding-top: 230px;
+  background-color: #00000000;
+}
+
+.aboutContent{
+  text-align: left;
+  background-color: #000000;
+  margin-left: 0px;
+
+}
+.aboutContent h1{
+  font-size: 40px;
+  padding-bottom: 20px;
+  padding-left: 100px;
+  padding-top: 70px;
+  color: #fff;
+}
+
+.aboutContent h2{
+  padding-bottom: 7px;
+  padding-top: 7px;
+  text-decoration: underline;
+  color: #fff;
+}
+
+
+.aboutContent p{
+  font-size: 20px;
+  color: #fff;
+  margin-left: 100px;
+}
+
+.aboutContent ul li{
+  font-size: 20px;
+}
+
+/*-----Projects Page------*/
+
+.projectsHeader{
+  height: 60vh;
+  width: 100%;
+  margin-top: 100px;
+  background-image: url(images/aboutBanner.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #fff
+}
+.projectsHeader h1{
+  font-size: 65px;
+  padding-top: 230px;
+}
+
+.projectsContent{
+  text-align: center;
+  margin-left: 30px;
+}
+.projectsContent h1{
+  font-size: 40px;
+}
+
+

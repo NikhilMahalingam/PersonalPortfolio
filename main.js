@@ -44,6 +44,7 @@ controls.enableDamping = true
 controls.enablePan = false
 controls.enableZoom = false
 controls.autoRotate = true
+controls.autoRotateSpeed = 4
 
 //Resize
 window.addEventListener('resize', () => {
