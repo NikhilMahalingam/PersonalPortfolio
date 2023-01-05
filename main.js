@@ -1,7 +1,9 @@
+//Ball imports
 import * as T from 'three'; 
 import "./style.css"
 import gsap from "gsap"
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls'
+
 
 //Scene
 const scene = new T.Scene;
@@ -100,3 +102,8 @@ gsap.to(mesh.material.color, {
     })
   }
 })
+
+//--------------------------------------------------
+
+
+

@@ -220,7 +220,7 @@ nav ul li{
   overflow: hidden;
   width: 100%;
   margin-top: 50rem;
-  background-image: url(images/aboutBanner.jpg);
+  background-image: url(images/aboutBanner2.jpg);
   z-index: 3;
   background-position: center;
   background-size: cover;
@@ -235,7 +235,7 @@ nav ul li{
 }
 
 .aboutContent{
-  background-color: #000000;
+  background-color: transparent;
   margin-left: 0px;
 }
 .aboutContent h1{
@@ -244,6 +244,7 @@ nav ul li{
   padding-top: 100px;
   margin-top: 10rem;
   color: #fff;
+  background-color: transparent;
 }
 
 .aboutContent h2{
@@ -253,7 +254,7 @@ nav ul li{
   color: rgb(199, 194, 194);
   padding-left: 50rem;
   font-style: italic;
-  
+  background-color: transparent;
 }
 
 
@@ -265,6 +266,7 @@ nav ul li{
   transform: translate(0%, -50%);
   text-align: justify;
   margin-right: 30rem;
+  background-color: transparent;
 }
 
 .aboutContent h3{
@@ -273,6 +275,7 @@ nav ul li{
   margin-top: 8rem;
   color: #fff;
   transform: translate(0%, 400%);
+  background-color: transparent;
 }
 
 .aboutContent h4{
@@ -282,6 +285,7 @@ nav ul li{
   padding-top: 70px;
   color: #fff;
   transform: translate(0%, 50%);
+  background-color: transparent;
 }
 
 .aboutContent h5{
@@ -359,6 +363,7 @@ nav ul li{
   font-size: 40px;
 }
 
+
 /*remove link color*/
 a { 
   text-decoration: none; 
@@ -401,4 +406,5 @@ flex-basis: 50%;
 flex-basis: 50%;
 }
 
+/* orbs */
 
