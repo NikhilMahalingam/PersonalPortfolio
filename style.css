@@ -2,9 +2,6 @@
   margin:0;
   padding: 0;
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
- 
 }
 
 body,
@@ -13,7 +10,7 @@ html{
   scroll-behavior: smooth;
   font-family: 'Montserrat', sans-serif;
   background-color: #000000;
-
+  place-items: center;
 }
 
 .webgl {
@@ -306,6 +303,14 @@ nav ul li{
   text-align: justify;
 }
 
+.aboutContent img{
+  width: 500px;
+  position: left;
+  overflow: hidden;
+  transform: translate(0%, -40%);
+  float: right
+}
+
 
 /*-----Projects Page------*/
 
@@ -363,6 +368,41 @@ nav ul li{
   font-size: 40px;
 }
 
+.bd{
+  border-radius: 30px;
+  width: 3000px;
+  height: 350px;
+  overflow: hidden;
+  float: right;
+  transform: translate(-20%,30%)
+
+}
+.tf{
+  border-radius: 30px;
+  width: 3000px;
+  height: 350px;
+  overflow: hidden;
+  float: right;
+  transform: translate(-20%,30%)
+}
+.mnist{
+  border-radius: 30px;
+  width: 3000px;
+  height: 350px;
+  overflow: hidden;
+  float: right;
+  transform: translate(-20%,55%)
+}
+.int{
+  border-radius: 30px;
+  width: 3000px;
+  height: 350px;
+  overflow: hidden;
+  float: right;
+  transform: translate(-20%,55%)
+}
+
+
 
 /*remove link color*/
 a { 
@@ -377,6 +417,7 @@ a:hover {
   text-decoration: none; 
   color:rgb(150, 146, 146)
 }
+
 a:focus { 
   text-decoration: none; 
 }
@@ -394,7 +435,21 @@ a:hover, a:active {
 
 .row1 h2{
 flex-basis: 50%;
+margin-left: 0;
+transform: translate(150%, 5%);
 }
+
+.tfp{
+transform: translate(69rem, -17rem);
+  text-align: left;
+  color:rgb(199, 194, 194);
+}
+
+.bdp{
+  transform: translate(15rem, -18rem);
+    text-align: left;
+    color:rgb(199, 194, 194);
+  }
 
 .row2{
   margin-top: 5%;
@@ -403,8 +458,111 @@ flex-basis: 50%;
 }
 
 .row2 h2{
-flex-basis: 50%;
+  margin-left: 0;
+  margin-top: 20px;
+  flex-basis: 50%;
+  transform: translate(150%,25%);
 }
 
-/* orbs */
+.intp{
+  transform: translate(85rem, -12.5rem);
+    text-align: left;
+    color:rgb(199, 194, 194);
+  }
+  
+.mnistp{
+    transform: translate(20rem, -11rem);
+      text-align: left;
+      color:rgb(199, 194, 194);
+    }
+  
+
+/* Contact Me*/
+.contact h1{
+    font-size: 45px;
+    text-align: center;
+    padding-top: 20rem;
+    margin-top: 10rem;
+    color: #fff;
+    background-color: transparent;
+  }
+
+  /* buttons */
+  .wrapper .button{
+    display: grid;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 20px 5px;
+    overflow: hidden;
+    background: rgb(0, 0, 0);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(114, 114, 114, 0.1);
+    transition: all 0.3s ease-out;
+    transform: translate(53.5rem);
+  }
+
+  .wrapper .button:hover{
+    width: 200px;
+  }
+
+  .wrapper .button .icon{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+  }
+
+  .wrapper .button:nth-child(1):hover .icon{
+    background-color: #0077B5;
+  }
+  .wrapper .button:nth-child(2):hover .icon{
+    background-color: #333;
+  }
+  .wrapper .button:nth-child(3):hover .icon{
+    background-color: #7289da;
+  }
+
+  .wrapper .button:nth-child(1) span{
+    color: #0077B5;
+  }
+  .wrapper .button:nth-child(2) span{
+    color: #333;
+  }
+  .wrapper .button:nth-child(3) span{
+    color: #7289da;
+  }
+
+  .wrapper .button .icon i{
+    font-size: 25px;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+    color: #fff;
+  }
+
+  .wrapper .button:hover .icon i{
+    color: rgb(0, 0, 0);
+  }
+
+  .wrapper .button span{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px;
+    transition: all 0.3s ease-out;
+    color: #fff;
+  }
+
+  .wrapper p{
+    margin-right: 100rem;
+    color:rgb(150, 146, 146)
+  }
+
 
