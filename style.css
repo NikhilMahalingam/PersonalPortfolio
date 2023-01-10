@@ -385,6 +385,7 @@ nav ul li{
   float: right;
   transform: translate(-20%,30%)
 }
+
 .mnist{
   border-radius: 30px;
   width: 3000px;
@@ -440,13 +441,20 @@ transform: translate(150%, 5%);
 }
 
 .tfp{
-transform: translate(69rem, -17rem);
+transform: translate(69rem, -18rem);
   text-align: left;
   color:rgb(199, 194, 194);
 }
 
+.sbu{
+  transform: translate(79.8rem, -19rem);
+    text-align: left;
+    font-weight: bold;
+    color:rgb(199, 194, 194);
+  }
+
 .bdp{
-  transform: translate(15rem, -18rem);
+  transform: translate(15rem, -19rem);
     text-align: left;
     color:rgb(199, 194, 194);
   }
@@ -485,6 +493,19 @@ transform: translate(69rem, -17rem);
     margin-top: 10rem;
     color: #fff;
     background-color: transparent;
+    margin-bottom: 10rem;
+  }
+
+  .contact p{
+    text-align: center;
+    transform: translate(50rem, -15rem);
+  }
+
+  .contact h4{
+    text-align: center;
+    position: relative;
+    transform: translate(0rem, -15rem);
+    color:rgb(150, 146, 146);
   }
 
   /* buttons */
@@ -501,7 +522,7 @@ transform: translate(69rem, -17rem);
     cursor: pointer;
     box-shadow: 0px 10px 10px rgba(114, 114, 114, 0.1);
     transition: all 0.3s ease-out;
-    transform: translate(53.5rem);
+    transform: translate(52.6rem);
   }
 
   .wrapper .button:hover{
