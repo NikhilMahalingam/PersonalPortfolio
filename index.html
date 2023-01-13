@@ -17,7 +17,6 @@
   <body>
     <canvas class="webgl"></canvas>
     <nav>
-      <a href="/"></a>
       <ul>
         <li><a href = "#head">Home</a></li>
         <li><a href = "#about">About Me</a></li>
@@ -43,32 +42,46 @@
   
       <section class="aboutContent">
   <!-- Overlay inner wrapper -->
-          <h1>Education.</h1>
-          <p1>I am an undergraduate student at Rutgers University - New Brunswick, 
-              <!---<br>--->double majoring in Electrical/Computer Engineering
-              <!---<br>--->and Computer Science and minoring in Mathematics.<!---</br>--->
-              <!---<br>--->My career goals are to either be an electrical electrical for
-              <!---<br>--->the aerospace/automotive industry or software/data engineer.<!---</br>--->
-          </p1>
+
+            <div class="container">
+              <h1>Education.</h1>
+            </div>
+
+
+              <p1>I am an undergraduate student at Rutgers University - New Brunswick,
+                  <!---<br>--->double majoring in Electrical/Computer Engineering
+                  <!---<br>--->and Computer Science and minoring in Mathematics.<!---</br>--->
+                  <!---<br>--->My career goals are to either be an electrical electrical for
+                  <!---<br>--->the aerospace/automotive industry or software/data engineer.<!---</br>--->
+              </p1>
+            </div>
 
          
 
-            <h4>Work Experience.</h4>
-            <ul>
-                <li>Summer 2022: Web Development - Dr. Nandini Dendukuri (McGill University)</li>
-                <li>Summer 2021: Research Intern - Dr. Andrew Zakhari (Remote - McGill University)</li>
-            </ul>
+
+              <div class="containerWork">
+                <h4>Work Experience.</h4>
+              </div>
+
+              <ul>
+                  <li>Summer 2022: Web Development - Dr. Nandini Dendukuri (McGill University)</li>
+                  <li>Summer 2021: Research Intern - Dr. Andrew Zakhari (Remote - McGill University)</li>
+              </ul>
 
 
-            <h3>Skills.</h3>
-            <h2>Main:</h2>
-            <p>
-                <ul>
-                    <li>Java</li>
-                    <li>Python</li>
-                    <li>HTML/CSS</li>
-                </ul>
-            </p>
+
+              <div class="container">
+                <h3>Skills.</h3>
+              </div>
+
+              <h2>Main:</h2>
+                  <ul>
+                      <li>Java</li>
+                      <li>Python</li>
+                      <li>HTML/CSS</li>
+                  </ul>
+
+
             <h2>Familiar With:</h2>
             <p>
                 <ul>
@@ -86,15 +99,24 @@
                     <li>OpenCV</li>
                     <img src="images/white knight v2.jpg">
                 </ul>
-            
-            <h5>Hobbies.</h5>
-                <ul>
-                  <li>Fencing - Epee</li>
-                  <li>Machine Learning/AI</li>
-                  <li>Philosopy/Debate</li>
-                  <li>Violin</li>
-                </ul>
 
+            
+
+              <div class="container">
+                <h5>Hobbies.</h5>
+              </div>
+
+      <div class="hobbylist">
+  
+                    <ul>
+                      <li>Fencing - Epee</li>
+                      <li>Machine Learning/AI</li>
+                      <li>Philosopy/Debate</li>
+                      <li>Violin</li>
+                    </ul>
+      </div>
+        
+              
 
 
       </section>
@@ -110,7 +132,7 @@
   
   
   <!---Projects Content--->
-  <section class = "projectsContent">
+  <!---<section class = "projectsContent">
   <div class="row1">
     <h2><a href = "https://github.com/NikhilMahalingam/IntroToStats-Bookdown" target="_blank" rel="noopener noreferrer">Intro to Statistics Bookdown</a></h1>
       <img src="images/bookdownShowcase.png" class = "bd">
@@ -133,7 +155,35 @@
   <div class="mnistp"><p>Python, NumPy, Linear Algebra</p></div>
   <div class="intp"><p>Python</p></div>
 
-    </section>
+    </section>--->
+
+    <div class="media-scroller">
+
+      <div class="media-element">
+        <h1 class="title">Intro to Statistics Site</h1>
+        <p class="languages">Bookdown, R, HTML/CSS, JavaScript, YAML, LaTeX</p>
+        <img src="images/bookdownShowcase.png" class = "bd">
+      </div>
+
+      <div class="media-element">
+        <h1 class="title">Restroom-Finder</h1>
+        <p class="languages">Google Maps API, Geolocation API, HTML/CSS, JavaScript, node.js, Git</p>
+        <img src="images/toiletShowcase.png" class = "bd">
+      </div>
+
+      <div class="media-element">
+        <h1 class="title">MNIST Neural Network</h1>
+        <p class="languages">Python, NumPy, Linear Algebra</p>
+        <img src="images/mnist.png" class = "bd">
+      </div>
+
+      <div class="media-element">
+        <h1 class="title">Integration Algorithm</h1>
+        <p class="languages">Python</p>
+        <img src="images/integration.png" class = "bd">
+      </div>
+
+    </div>
 
     <section class="contact" id="contact">
       <!-- Overlay inner wrapper -->
@@ -156,8 +206,10 @@
                   <span>NG#3240</span>
                 </div>
 
-                <p>If you would like to work together, see my full resume, or have any other inquires, feel free to email me at</p>
-                <h4>mahalingamnikhil@gmail.com</h4>
+                <div class="contactpara">
+                  <p>If you would like to work together, see my full resume, or have any other inquires, feel free to email me at</p>
+                  <h4>mahalingamnikhil@gmail.com</h4>
+                </div>
 
               </div>
     

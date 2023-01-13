@@ -1,3 +1,6 @@
+@import "https://unpkg.com/open-props";
+
+
 *{
   margin:0;
   padding: 0;
@@ -18,9 +21,26 @@ html{
   top: 0;
   left: 0;
   z-index: 1;
+  max-width: fit-content;
 }
 
 ::-webkit-scrollbar {
+  width: 1em;
+}
+
+::-webkit-scrollbar-track{
+  background: #333;
+}
+
+::-webkit-scrollbar-thumb{
+  background: rgb(37, 37, 37);
+  border-radius: 100vw;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: linear-gradient(to right, rgb(19, 19, 19),rgb(134, 134, 134), rgb(19, 19, 19));
+  border-radius: 100vw;
 }
 
 nav{
@@ -30,6 +50,8 @@ position: relative;
 padding: 4rem 8rem;
 display: flex;
 justify-content: space-between;
+float: right;
+
 }
 
 nav a{
@@ -40,7 +62,6 @@ nav a{
 nav ul{
   list-style: none;
   display: flex;
-
 }
 
 nav ul li{
@@ -169,44 +190,13 @@ nav ul li{
       background-color: transparent;
   }
 
-  #scrollPath{
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 10px;
-      height: 100%;
-      background: rgba(255, 255, 255, 0);
-  }
-  #progressbar{
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 10px;
-      background: linear-gradient(to top,#ffffff00,#00000000);
-      animation: animate 5s linear infinite; 
-      z-index: 2;
+  .containerWork{
+    margin-inline: auto;
+    width: min(30%, 70.5rem);
+    justify-content: space-between;
+    transform: translate(-40%);
   }
   
-  #progressbar:before{
-      content: '';
-      position:absolute;
-      top:0;
-      right:0;
-      width:100%;
-      height:100%;
-      background: linear-gradient(to top,#ffffff00,#00000000);
-      filter: blur(10px);
-  }
-  #progressbar:after{
-      content: '';
-      position:absolute;
-      top:0;
-      right:0;
-      width:100%;
-      height:100%;
-      background: linear-gradient(to top,#ffffff00,#00000000);
-      filter: blur(30px);
-  }
 }
 
 
@@ -215,8 +205,8 @@ nav ul li{
 .aboutHeader{
   height: 60vh;
   overflow: hidden;
-  width: 100%;
-  margin-top: 50rem;
+  max-width: 100%;
+  margin-top: 60rem;
   background-image: url(images/aboutBanner2.jpg);
   z-index: 3;
   background-position: center;
@@ -231,15 +221,30 @@ nav ul li{
   background-color: #00000000;
 }
 
+.container{
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+  justify-content: space-between;
+}
+
+
+.containerWork{
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+  justify-content: space-between;
+}
+
 .aboutContent{
   background-color: transparent;
   margin-left: 0px;
+  max-width: 100rem;
+  min-height: 100px;
+  margin-top: 10rem;
 }
 .aboutContent h1{
   font-size: 40px;
-  padding-left: 20rem;
-  padding-top: 100px;
-  margin-top: 10rem;
+  display: flex;
+  place-content: left;
   color: #fff;
   background-color: transparent;
 }
@@ -247,38 +252,40 @@ nav ul li{
 .aboutContent h2{
   padding-bottom: 7px;
   padding-top: 7px;
+  display: flex;
   text-decoration: none;
   color: rgb(199, 194, 194);
-  padding-left: 50rem;
   font-style: italic;
-  background-color: transparent;
+  width: min(45%, 70.5rem);
+  margin: auto;
+  transform: translate(60%);
 }
 
 
 .aboutContent p1{
   font-size: 20px;
   color: rgb(150, 146, 146);
-  position: absolute;
-  left: 50rem;
-  transform: translate(0%, -50%);
-  text-align: justify;
-  margin-right: 30rem;
-  background-color: transparent;
+  text-align: left;
+  display: flex;
+  width: min(45%, 70.5rem);
+  margin-left: auto;
+  transform: translate(0, -60%);
 }
 
 .aboutContent h3{
   font-size: 40px;
-  padding-left: 20rem;
+  display: flex;
+  place-content: left;
   margin-top: 8rem;
   color: #fff;
   transform: translate(0%, 400%);
-  background-color: transparent;
 }
 
 .aboutContent h4{
   font-size: 40px;
   padding-bottom: 20px;
-  padding-left: 20rem;
+  display: flex;
+  place-content: left;
   padding-top: 70px;
   color: #fff;
   transform: translate(0%, 50%);
@@ -288,27 +295,37 @@ nav ul li{
 .aboutContent h5{
   font-size: 40px;
   padding-bottom: 20px;
-  padding-left: 20rem;
+  display: flex;
+  place-content: left;
   padding-top: 70px;
   color: #fff;
   transform: translate(0%, 60%);
 }
 
+
 .aboutContent ul li{
   font-size: 20px;
   color: rgb(150, 146, 146);
-  padding-left: 50rem;
+  width: min(45%, 70.5rem);
+  display: flex;
+  margin-left: auto;
+  list-style: none;
   padding-top: 1px;
-  margin-right: 30rem;
-  text-align: justify;
+}
+
+.hobbylist{
+  transform: translate(67%);
+  width: min(45%, 72.5rem);
 }
 
 .aboutContent img{
-  width: 500px;
-  position: left;
+  max-width: 30%;
+  margin-inline: auto;
+  display: flex;
   overflow: hidden;
-  transform: translate(0%, -40%);
-  float: right
+  float: right;
+  transform: translate(50%, -40%);
+  z-index: -1;
 }
 
 
@@ -367,7 +384,7 @@ nav ul li{
 .projectsContent h1{
   font-size: 40px;
 }
-
+/*
 .bd{
   border-radius: 30px;
   width: 3000px;
@@ -402,7 +419,39 @@ nav ul li{
   float: right;
   transform: translate(-20%,55%)
 }
+*/
 
+/* media scroller */
+.media-scroller{
+  display: grid;
+  gap: var(--size-3);
+  grid-auto-flow: column;
+  grid-auto-columns: 33%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.media-element{
+}
+
+.media-element img{
+  max-width: 100%;
+  padding: 3rem;
+  background: linear-gradient(rgb(17, 17, 17), rgb(5, 5, 5))
+}
+
+.title{
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+
+.languages{
+  font-size: 15px;
+  font-style: italic;
+  text-align: center;
+  color:rgb(150, 146, 146);
+}
 
 
 /*remove link color*/
@@ -498,19 +547,44 @@ transform: translate(69rem, -18rem);
 
   .contact p{
     text-align: center;
-    transform: translate(50rem, -15rem);
+    display: flex;
+    width: min(40%, 70.5rem);
+    transform: translate(51%);
+    margin-inline: auto;
   }
-
   .contact h4{
     text-align: center;
-    position: relative;
-    transform: translate(0rem, -15rem);
-    color:rgb(150, 146, 146);
+    color: #afafaf;
+    display: flex;
+    width: min(40%, 70.5rem);
+    margin-inline: auto;
+
+  }
+  
+  .contactpara{
+    text-align: center;
+    width: min(80%, 70.5rem);
+    margin-inline: auto;
+    transform: translate(8.5%, -15rem);
   }
 
+
+  .aboutContent p1{
+    font-size: 20px;
+    color: rgb(150, 146, 146);
+    text-align: left;
+    display: flex;
+    width: min(45%, 70.5rem);
+    margin-left: auto;
+    transform: translate(0, -60%);
+  }
+
+
   /* buttons */
+  .wrapper{
+    text-align: center;
+  }
   .wrapper .button{
-    display: grid;
     box-sizing: border-box;
     display: inline-block;
     height: 60px;
@@ -522,7 +596,7 @@ transform: translate(69rem, -18rem);
     cursor: pointer;
     box-shadow: 0px 10px 10px rgba(114, 114, 114, 0.1);
     transition: all 0.3s ease-out;
-    transform: translate(52.6rem);
+    text-align: left;
   }
 
   .wrapper .button:hover{
